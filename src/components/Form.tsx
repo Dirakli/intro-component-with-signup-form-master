@@ -4,7 +4,16 @@ import styled from "styled-components";
 
 function Form() {
     const [useInfro, setUserInfo] = useState<any>();
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<any>();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormErrors>();
+
+    interface FormErrors {
+        firstName?: string;
+        lastName?: string;
+        email?: string;
+        password: string;
+        // add other form field names and error messages as needed
+    }
+
 
     function onsubmit(data: any) {
         console.log(data)

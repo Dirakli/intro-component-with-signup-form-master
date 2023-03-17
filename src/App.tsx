@@ -1,15 +1,15 @@
 import { createGlobalStyle } from "styled-components"
 import styled from "styled-components"
 import mobileBackground from "/assets/bg-intro-mobile.png";
+import desktopBackground from "/assets/bg-intro-desktop.png";
 import Form from "./components/Form";
-import { useForm } from "react-hook-form/dist/useForm";
 
 function App() {
 
   return (
     <WholeScreen>
       <GlobalStyles />
-      <MainWrapper image={mobileBackground} >
+      <MainWrapper mobileImage={mobileBackground} desktopImage={desktopBackground}>
         <HeadingAndDescriptionWrapper>
           <Heading>Learn to code by watching others</Heading>
           <Desctiption>See how experienced developers solve problems in real-time.
@@ -103,7 +103,7 @@ const MainWrapper = styled.div<any>`
   padding-top: 88px;
   width: 375px;
   height: 1000px;
-  background-image: url(${(props) => props.image});
+  background-image: url(${(props) => props.mobileImage});
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -118,6 +118,7 @@ const MainWrapper = styled.div<any>`
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    background-image: url(${(props) => props.desktopImage});
   }
 `
 
