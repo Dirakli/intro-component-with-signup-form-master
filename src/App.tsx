@@ -16,12 +16,7 @@ function App() {
             Watching scripted tutorials is great, but understanding how
             developers think is invaluable. </Desctiption>
         </HeadingAndDescriptionWrapper>
-        <div>
-          <TryitforfreeButton ><TryitforfreeText >Try it free 7 days</TryitforfreeText>
-            <TryitforfreeText style={{ fontWeight: "400" }} > then $20/mo. thereafter</TryitforfreeText>
-          </TryitforfreeButton>
           <Form></Form>
-        </div>
       </MainWrapper>
     </WholeScreen>
   )
@@ -37,33 +32,7 @@ const HeadingAndDescriptionWrapper = styled.div`
  }
 `
 
-const TryitforfreeText = styled.span`
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 26px;
-  color: rgba(255, 255, 255, 1);
-  letter-spacing: 0.27px;
-`
 
-
-const TryitforfreeButton = styled.button`
-  width: 327px;
-  height: 88px;
-  padding-left: 67px;
-  border: none;
-  margin-top: 64px;
-  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
-  padding-right: 66px;
-  border-radius: 10px;
-  background-color: rgba(94, 84, 164, 1);
-
-  @media (min-width: 1200px) {
-    width: 540px;
-    height: 60px;
-    margin-top: 0;
-  }
-`
 
 const Desctiption = styled.p`
   font-family: 'Poppins', sans-serif;
